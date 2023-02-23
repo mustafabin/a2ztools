@@ -1,22 +1,15 @@
-import { useRef } from 'react'
-import tracker from './util/tracker'
-import './App.scss'
+import "./App.scss";
+import { Route, Routes } from "react-router-dom";
+import Landing from "./screens/Landing";
 function App() {
-  
-  const divRef = useRef(null)
-  const inView = tracker(divRef)
-  if (inView) {
-    console.log("in viewport:", divRef.current);
-  }else{
-    console.log("not in view")
-  }
-  return (
-    <div className="App">
-        <div className="App-tempage App-tempage-one"></div>
-        <div ref={divRef} className="App-tempage App-tempage-two"></div>
-        <div  className="App-tempage App-tempage-three"></div>
-    </div>
-  )
+	return (
+		<>
+			<Routes>
+				<Route path="/" element={<Landing />} />
+				<Route path="*" element={<h1>Error Page</h1>} />
+			</Routes>
+		</>
+	);
 }
 
-export default App
+export default App;
