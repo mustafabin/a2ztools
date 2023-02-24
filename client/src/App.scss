@@ -2,13 +2,8 @@
     padding: 0px;
     margin: 0px;
 }
-.App{
-    display: flex;
-    border: 1px solid red;
-
-
-}
 .Landing{
+    color: black;
     &-tempage{
         height: 70vh;
         width: 100vw;
@@ -18,17 +13,19 @@
 .Navbar{
     &-header{
         background-color: var(--blue);
-        padding: 1rem;
         font-weight: bold;
+        padding: 0.25rem;
+        padding-left: 1rem;
     }
     &-content{
         display: flex;
         width: 100vw;
-        padding: 1rem;
         position: -webkit-sticky;
         position: sticky;
         top: 0;
         background-color: var(--dark-blue);
-
+        & h1{
+            padding: 1rem;
+        }
     }
 }
