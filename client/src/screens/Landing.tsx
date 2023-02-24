@@ -22,10 +22,10 @@ const Landing = () => {
 		<div className="Landing">
 			<div className="Landing-tempage"></div>
 			<div ref={catalogRef} style={{ backgroundColor: "red" }} className="Landing-tempage">
-				{viewportTrackers.catalog && <motion.div {...animationValues}>BROWSE OUR CATEGORIES</motion.div>}
+				{viewportTrackers.catalog && <motion.div style={{padding:"2rem",backgroundColor:"lightgreen"}} {...animationValues}>BROWSE OUR CATEGORIES</motion.div>}
 			</div>
 			<div ref={featuredRef} style={{ backgroundColor: "blue" }} className="Landing-tempage">
-				{viewportTrackers.featured && <motion.div {...animationValues}>FEATURED PRODUCTS</motion.div>}
+				{viewportTrackers.featured && <motion.div style={{padding:"2rem",backgroundColor:"lightgreen"}} {...animationValues}>FEATURED PRODUCTS</motion.div>}
 			</div>
 		</div>
 	);
